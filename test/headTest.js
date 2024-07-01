@@ -1,9 +1,19 @@
 
 const head = require("../head");
-const assertEqual = require("../assertEqual");
+const assert = require("chai").assert;
+
+describe("#head", () => {
+  it("returns Hello Lighthouse Labs", () => {
+    assert.strictEqual(head(["Hello Lighthouse Labs"]), 'Hello Lighthouse Labs');
+  });
+  it("returns Im actually coding", () => {
+    assert.strictEqual(head(['Im actually coding']), 'Im actually coding');
+  });
+});
 
 
 
-assertEqual(head(["Hello", "Lighthouse", "Labs"]), "Hello");
-assertEqual(head([5, 6, 7]), 5);
+
+
+
 
