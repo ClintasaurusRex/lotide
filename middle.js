@@ -1,4 +1,4 @@
-const assertArraysEqual = require("./assertArraysEqual");
+//const assertArraysEqual = require("./assertArraysEqual");
 
 
 
@@ -15,8 +15,8 @@ const middle = function(array) {
   return [array[mid]];// odd nums
 };
 
-// assertArraysEqual(middle([1, 2, 3], [1, 2, 3])); // should PASS
-// assertArraysEqual(middle([1, 2, 3], [3, 2, 1])); // should PASS
+// assertArraysEqual(middle([1, 2, 3]), [1, 2, 3]); // should PASS
+// assertArraysEqual(middle([1, 2, 3]), [3, 2, 1]); // should PASS
 // assertArraysEqual(["1", "2", "3"], ["1", "2", "3"]);
 
 
