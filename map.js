@@ -33,7 +33,7 @@ const assertArrayEqual = (arr1, arr2) => {
 
 const words = ["ground", "control", "to", "major", "tom"];
 
-const map = function(array, callback) {
+const maps = function(array, callback) {
 
   const results = [];
   for (let item of array) { // loop though
@@ -48,13 +48,13 @@ const map = function(array, callback) {
   return results;
 };
 
-const newResults = map(words, word => word[0]);
+const newResults = maps(words, word => word[0]);
 
 const expected = ["g", "c", "t", "m", "t"];
 
 assertArrayEqual(newResults, expected);
 
 
-
+module.exports = maps;
 
 

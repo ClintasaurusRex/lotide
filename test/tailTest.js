@@ -1,9 +1,22 @@
-
+const assert = require("chai").assert;
 const tail = require("../tail");
-const assertEqual = require("../assertEqual");
 
-const words = ["Yo Yo", "Lighthouse", "Labs"];
-const words1 = ['welcome', 'to', 'the', 'jungle'];
-tail(words, words1);
-assertEqual(words.length, 3);
-assertEqual(words1.length, 3);
+
+describe("#tail", () => {
+  it("returns an array without the first element for ['Yo Yo, 'Lighthouse', 'Labs']", () => {
+    assert.deepEqual(tail(["Yo Yo", "Lighthouse", "Labs"]), ["Lighthouse", "Labs"]);
+  });
+
+  it("returns an MT array when input array contains one element", () => {
+    assert.deepEqual(tail(['Im actually coding']), []);
+  });
+
+  it("returns array without first elements ['welcome', 'to', 'the', 'jungle']", () => {
+    assert.deepEqual(tail(['welcome', 'to', 'the', 'jungle']), ['to', 'the', 'jungle']);
+  });
+
+
+});
+
+
+

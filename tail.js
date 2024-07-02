@@ -1,11 +1,11 @@
+const assertEqual = require("./assertEqual.js");
 
-
+// tail.js
 const tail = function(arr) {
-  if (!Array.isArray(arr))  {
-    return undefined;
-  }
-  return arr.length > 1 ? arr.slice(1) : [];
+  return arr.slice(1);
 };
+
+module.exports = tail;
 
 // const words = ["Yo Yo", "Lighthouse", "Labs"];
 // tail(words);

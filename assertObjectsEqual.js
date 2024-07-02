@@ -1,4 +1,4 @@
-const eqArrays = function (arr1, arr2) {
+const eqArrays = function(arr1, arr2) {
   if (arr1.length !== arr2.length) {
     return false;
   }
@@ -11,16 +11,16 @@ const eqArrays = function (arr1, arr2) {
 };
 
 
-const assertEqual = function (actual, expected) {
-  if (actual !== expected) {
-    console.log(`🛑🛑🛑Assertion Failed: ${actual} !== ${expected}`);
-  } else {
-    console.log(`✅✅✅Assertion Passed: ${actual} === ${expected}`);
-  }
-};
+// const assertEqual = function(actual, expected) {
+//   if (actual !== expected) {
+//     console.log(`🛑🛑🛑Assertion Failed: ${actual} !== ${expected}`);
+//   } else {
+//     console.log(`✅✅✅Assertion Passed: ${actual} === ${expected}`);
+//   }
+// };
 // Returns true if both objects have identical keys with identical values.
 // Otherwise you get back a big fat false!
-const eqObjects = function (object1, object2) {
+const eqObjects = function(object1, object2) {
 
   const key1 = Object.keys(object1);
   const key2 = Object.keys(object2);
@@ -28,25 +28,29 @@ const eqObjects = function (object1, object2) {
   if (key1.length !== key2.length) {
     return false;
   }
+  // Loop through each key in object1
   for (const key of key1) {
     const value1 = object1[key];
     const value2 = object2[key];
-
+    // Check if the values are arrays
     if (Array.isArray(value1) && Array.isArray(value2)) {
+      // Use eqArrays to compare arrays
       if (!eqArrays(value1, value2)) {
-        return false;
+        return false; // Objects are not equal if arrays are not equal
       }
     } else {
-    }
-    if (value1 !== value2) {
-      return false;
+      // Compare primitive values
+      if (value1 !== value2) {
+        return false; // Objects are not equal if any corresponding values differ
+      }
     }
   }
-}
-return true;
+  return true; // Objects are equal if all keys and values match
 };
 
-const assertObjectEqual = function (actual, expected) {
+
+
+const assertObjectEqual = function(actual, expected) {
   const inspect = require("util").inspect;
 
   if (eqObjects(actual, expected)) {

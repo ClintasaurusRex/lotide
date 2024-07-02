@@ -1,27 +1,5 @@
 
-const eqArrays  = function(arr1, arr2) {
-  if (arr1.length !== arr2.length) {
-    return false;
-  }
-  for (let i = 0; i < arr1.length; i++) {
-    if (arr1[i] !== arr2[i]) {
-      return false;
-    }
-  }
-  return true;
-};
 
-const assertArrayEqual = (arr1, arr2) => {
-  if (eqArrays(arr1, arr2)) {
-    //Arrays are equal
-    console.log(`✅✅✅ Assertion Passed: 
-      ${JSON.stringify(arr1)} === ${JSON.stringify(arr2)}`);
-  } else {
-    //Arrays are not equal
-    console.log(`🛑🛑🛑 Assertion Failed: 
-      ${JSON.stringify(arr1)} !== ${JSON.stringify(arr2)}`);
-  }
-};
 
 const letterPostions = function(sentance) {
   const results = {};
@@ -37,4 +15,6 @@ const letterPostions = function(sentance) {
   return results;
 };
 
-assertArrayEqual(letterPostions("hello").e, [1]);
+// letterPostions("hello").e, [1];
+
+module.exports = letterPostions;
