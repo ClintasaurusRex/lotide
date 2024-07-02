@@ -1,4 +1,4 @@
-const assertEqual = require("./assertEqual");
+// const assertEqual = require("./assertEqual");
 // eqArrays.js
 
 const eqArrays  = function(arr1, arr2) {
@@ -14,9 +14,9 @@ const eqArrays  = function(arr1, arr2) {
 };
 
 
-assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // should PASS
-assertEqual(eqArrays([1, 2, 3], [3, 2, 1]), false); // should PASS
-assertEqual(eqArrays(["1", "2", "3"], ["1", "2", "3", "4"]), true); //
+// assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true); // should PASS
+// assertEqual(eqArrays([1, 2, 3], [3, 2, 1]), false); // should PASS
+// assertEqual(eqArrays(["1", "2", "3"], ["1", "2", "3", "4"]), true); //
 
 
 module.exports = eqArrays;

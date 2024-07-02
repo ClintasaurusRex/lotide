@@ -1,52 +1,52 @@
-const eqArrays = function(arr1, arr2) {
-  if (arr1.length !== arr2.length) {
-    return false;
-  }
-  for (let i = 0; i < arr1.length; i++) {
-    if (arr1[i] !== arr2[i]) {
-      return false;
-    }
-  }
-  return true;
-};
-
-
-// const assertEqual = function(actual, expected) {
-//   if (actual !== expected) {
-//     console.log(`🛑🛑🛑Assertion Failed: ${actual} !== ${expected}`);
-//   } else {
-//     console.log(`✅✅✅Assertion Passed: ${actual} === ${expected}`);
+// const eqArrays = function(arr1, arr2) {
+//   if (arr1.length !== arr2.length) {
+//     return false;
 //   }
+//   for (let i = 0; i < arr1.length; i++) {
+//     if (arr1[i] !== arr2[i]) {
+//       return false;
+//     }
+//   }
+//   return true;
 // };
-// Returns true if both objects have identical keys with identical values.
-// Otherwise you get back a big fat false!
-const eqObjects = function(object1, object2) {
 
-  const key1 = Object.keys(object1);
-  const key2 = Object.keys(object2);
 
-  if (key1.length !== key2.length) {
-    return false;
-  }
-  // Loop through each key in object1
-  for (const key of key1) {
-    const value1 = object1[key];
-    const value2 = object2[key];
-    // Check if the values are arrays
-    if (Array.isArray(value1) && Array.isArray(value2)) {
-      // Use eqArrays to compare arrays
-      if (!eqArrays(value1, value2)) {
-        return false; // Objects are not equal if arrays are not equal
-      }
-    } else {
-      // Compare primitive values
-      if (value1 !== value2) {
-        return false; // Objects are not equal if any corresponding values differ
-      }
-    }
-  }
-  return true; // Objects are equal if all keys and values match
-};
+// // const assertEqual = function(actual, expected) {
+// //   if (actual !== expected) {
+// //     console.log(`🛑🛑🛑Assertion Failed: ${actual} !== ${expected}`);
+// //   } else {
+// //     console.log(`✅✅✅Assertion Passed: ${actual} === ${expected}`);
+// //   }
+// // };
+// // Returns true if both objects have identical keys with identical values.
+// // Otherwise you get back a big fat false!
+// const eqObjects = function(object1, object2) {
+
+//   const key1 = Object.keys(object1);
+//   const key2 = Object.keys(object2);
+
+//   if (key1.length !== key2.length) {
+//     return false;
+//   }
+//   // Loop through each key in object1
+//   for (const key of key1) {
+//     const value1 = object1[key];
+//     const value2 = object2[key];
+//     // Check if the values are arrays
+//     if (Array.isArray(value1) && Array.isArray(value2)) {
+//       // Use eqArrays to compare arrays
+//       if (!eqArrays(value1, value2)) {
+//         return false; // Objects are not equal if arrays are not equal
+//       }
+//     } else {
+//       // Compare primitive values
+//       if (value1 !== value2) {
+//         return false; // Objects are not equal if any corresponding values differ
+//       }
+//     }
+//   }
+//   return true; // Objects are equal if all keys and values match
+// };
 
 
 
@@ -62,9 +62,11 @@ const assertObjectEqual = function(actual, expected) {
   }
 };
 
-const obj1 = { a: "1", b: 2 };
-const obj2 = { b: 2, a: "1" };
-const obj3 = { a: "1", b: 2, c: 3 };
+// const obj1 = { a: "1", b: 2 };
+// const obj2 = { b: 2, a: "1" };
+// const obj3 = { a: "1", b: 2, c: 3 };
 
-assertObjectEqual(obj1, obj2);
-assertObjectEqual(obj1, obj3);
+// assertObjectEqual(obj1, obj2);
+// assertObjectEqual(obj1, obj3);
+
+module.exports = assertObjectEqual;

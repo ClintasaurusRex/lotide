@@ -1,12 +1,12 @@
 
 
-const assertEqual = function(actual, expected) {
-  if (actual !== expected) {
-    console.log(`Assertion Failed: ${actual} !== ${expected}`);
-  } else {
-    console.log(`Assertion Passed: ${actual} === ${expected}`);
-  }
-};
+// const assertEqual = function(actual, expected) {
+//   if (actual !== expected) {
+//     console.log(`Assertion Failed: ${actual} !== ${expected}`);
+//   } else {
+//     console.log(`Assertion Passed: ${actual} === ${expected}`);
+//   }
+// };
 
 // inside the loop,
 // increment the counter for each item:
@@ -30,29 +30,30 @@ const countOnly = function(allItems, ItemsToCount) {
 };
 
 
-const firstNames = [
-  "Karl",
-  "Salima",
-  "Agouhanna",
-  "Fang",
-  "Kavith",
-  "Jason",
-  "Salima",
-  "Fang",
-  "Joe"
-];
+// const firstNames = [
+//   "Karl",
+//   "Salima",
+//   "Agouhanna",
+//   "Fang",
+//   "Kavith",
+//   "Jason",
+//   "Salima",
+//   "Fang",
+//   "Joe"
+// ];
 
-const results1 = countOnly(firstNames, {
-  Jason: true,
-  Karima: true,
-  Fang: true,
-  Agouhanna: false,
-});
+// const results1 = countOnly(firstNames, {
+//   Jason: true,
+//   Karima: true,
+//   Fang: true,
+//   Agouhanna: false,
+// });
 
-assertEqual(results1["Jason"], 1);
-assertEqual(results1["Karima"], undefined);
-assertEqual(results1["Fang"], 2);
-assertEqual(results1["Agouhanna"], undefined);
+// assertEqual(results1["Jason"], 1);
+// assertEqual(results1["Karima"], undefined);
+// assertEqual(results1["Fang"], 2);
+// assertEqual(results1["Agouhanna"], undefined);
 
 // assertEqual("Lighthouse Labs", "Bootcamp");
 // assertEqual(1, 1);
+module.exports = countOnly;
