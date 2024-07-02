@@ -1,4 +1,4 @@
-
+// all functions in one place
 const head = require('./head');
 const tail = require('./tail');
 const middle = require('./middle');
