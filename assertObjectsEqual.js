@@ -10,7 +10,7 @@
 //   return true;
 // };
 
-
+const eqObjects = require('./eqObjects');
 // // const assertEqual = function(actual, expected) {
 // //   if (actual !== expected) {
 // //     console.log(`🛑🛑🛑Assertion Failed: ${actual} !== ${expected}`);
@@ -43,14 +43,12 @@
 //       if (value1 !== value2) {
 //         return false; // Objects are not equal if any corresponding values differ
 //       }
-//     }
-//   }
-//   return true; // Objects are equal if all keys and values match
+//     }const eqObjects = require('./eqObjects');bjects are equal if all keys and values match
 // };
 
 
 
-const assertObjectEqual = function(actual, expected) {
+const assertObjectsEqual = function(actual, expected) {
   const inspect = require("util").inspect;
 
   if (eqObjects(actual, expected)) {
@@ -69,4 +67,4 @@ const assertObjectEqual = function(actual, expected) {
 // assertObjectEqual(obj1, obj2);
 // assertObjectEqual(obj1, obj3);
 
-module.exports = assertObjectEqual;
+module.exports = assertObjectsEqual;

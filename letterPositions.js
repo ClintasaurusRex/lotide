@@ -1,7 +1,7 @@
 
 
 
-const letterPostions = function(sentance) {
+const letterPositions = function(sentance) {
   const results = {};
   for (let i = 0; i < sentance.length; i++) {
     if (sentance[i] !== " ") {
@@ -17,4 +17,4 @@ const letterPostions = function(sentance) {
 
 // letterPostions("hello").e, [1];
 
-module.exports = letterPostions;
+module.exports = letterPositions;
